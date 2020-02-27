@@ -1,0 +1,17 @@
+
+class Solution {
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+         List<Integer> list=new ArrayList<Integer>();
+	    int max=nums.length;
+	    int a[]=new int[max];
+	    for(int i:nums) {
+	    	a[i-1]=1;
+	    }
+	    for(int j=0;j<max;j++) {
+	    	if(a[j]==0) {
+	    		list.add(j+1);
+	    	}
+	    }
+		return list;
+    }
+}
